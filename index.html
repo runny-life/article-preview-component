@@ -9,6 +9,13 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
@@ -25,11 +32,11 @@
 
         <div class="card__body">
           <div class="card__info">
-            <h1 class="card__title">
+            <h1 class="card__title text-preset-1">
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
             </h1>
-            <p class="card__description">
+            <p class="card__description text-preset-2">
               Ever been in a room and felt like something was missing? Perhaps
               it felt slightly bare and uninviting. I’ve got some simple tips to
               help you make any room feel complete.
@@ -47,8 +54,10 @@
                 />
               </div>
               <div class="person__info">
-                <p class="person__name">Michelle Appleton</p>
-                <time class="person__date" datetime="2020-06-28"
+                <p class="person__name text-preset-2--bold">
+                  Michelle Appleton
+                </p>
+                <time class="person__date text-preset-2" datetime="2020-06-28"
                   >28 Jun 2020</time
                 >
               </div>
@@ -75,7 +84,7 @@
             </button>
             <dialog class="modal" id="share-dialog" data-js-modal>
               <div class="modal__body">
-                <h3 class="modal__title">Share</h3>
+                <h3 class="modal__title text-preset-3">Share</h3>
                 <div class="modal__actions">
                   <a href="#" class="modal__link" aria-label="FaceBook">
                     <svg
