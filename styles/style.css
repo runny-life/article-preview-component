@@ -30,6 +30,11 @@ body {
   background-color: var(--gray-200);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -72,6 +77,144 @@ svg * {
 
 .content {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-block: 4rem;
   padding-inline: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.card__image-wrapper {
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 1.875rem 1.125rem 1.875rem;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card__title {
+  color: var(--gray-900);
+}
+
+.card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Person */
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.person__image-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.person__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.person__name {
+  color: var(--gray-900);
+}
+
+/* Button */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--gray-500);
+  background-color: var(--gray-200);
+  border-radius: 50%;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 1.375rem;
+  padding-inline: 1.875rem;
+  transform: scale(0);
+  transform-origin: bottom;
+  color: var(--white);
+  background-color: var(--gray-900);
+  border: none;
+  border-radius: 0 0 10px 10px;
+  transition: transform 0.3s;
+}
+
+.modal:open {
+  transform: scale(1);
+}
+
+.modal__body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.modal__title {
+  color: var(--gray-400);
+  text-transform: uppercase;
+}
+
+.modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__button {
+  color: var(--white);
+  background-color: var(--gray-500);
 }
