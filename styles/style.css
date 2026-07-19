@@ -176,19 +176,24 @@ svg * {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  bottom: 0;
   padding-block: 1.375rem;
   padding-inline: 1.875rem;
-  transform: scale(0);
   transform-origin: bottom;
   color: var(--white);
   background-color: var(--gray-900);
   border: none;
   border-radius: 0 0 10px 10px;
-  transition: transform 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s;
 }
 
 .modal:open {
-  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__body {
@@ -236,6 +241,41 @@ svg * {
 
   .card__info {
     gap: 1.5rem;
+  }
+
+  /* Modal */
+  .modal__wrapper {
+    position: relative;
+  }
+
+  .modal {
+    width: 15.5rem;
+    left: 50%;
+    bottom: calc(100% + 23px);
+    transform: translateX(-50%);
+    padding-block: 1.125rem;
+    padding-inline: 2.375rem;
+    border-radius: 10px;
+  }
+
+  .modal::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 20px;
+    background: var(--gray-900);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+
+  .modal__button {
+    display: none;
+  }
+
+  .modal:open {
+    transform: scale(1) translateX(-50%);
   }
 }
 
